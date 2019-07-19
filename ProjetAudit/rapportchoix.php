@@ -29,7 +29,7 @@
                 try 
                 {
                     include 'bdd.php';
-                    $demande = $bdd->query('SELECT nom  FROM `template` ORDER BY `nom`');
+                    $demande = $bdd->query('SELECT nom  FROM `rapport` ORDER BY `nom`');
             ?>
             <tr>
                 <td>

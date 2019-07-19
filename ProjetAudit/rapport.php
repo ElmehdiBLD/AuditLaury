@@ -29,14 +29,14 @@
                     <div class="encadre">
                         <h2><a href="rapportchoix.php?var=consulter">Consulter un rapport</a></h2>
                     </div>
-                    <br />
+<!--                    <br />
                     <div  class="encadre">
                         <h2 ><a href="rapportcreation.php">Créer un rapport</a></h2>
                     </div>
                     <br />
                     <div class="encadre">
                         <h2><a href="rapportchoix.php?var=supprimer">Supprimer un rapport</a></h2>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="col-md-4">

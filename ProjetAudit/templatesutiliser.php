@@ -35,12 +35,13 @@
         <div class="col-md-2">
         </div>
         <div class="col-md-8">
-            <form action="requetes/createmplates.php" method="POST">
-            <h1><?php echo $_GET['nom']?></h1>
-            <br />
+            <form action="enregeval.php" method="POST">
+            <h1><?php echo $_GET['nom']?><br><input style="display:none" type="text" name="nom_temp" value="<?php echo $_GET['nom']?>">
+            </h1><input style="margin-left:200px;height:40px;width:300px;" type="text" id="nomrapport" name="nom_rapport" placeholder="NOM DU RAPPORT">
+            <br /><br>
         <?php
         $i=1;
-        $c=1;
+        
         while($nomcat=$recupcat->fetch())
         {   
             $recupsscat=$bdd->prepare('SELECT `nom` FROM `souscategorie` WHERE `idCategorie`=:categorie');
@@ -50,11 +51,12 @@
         ?>
             <div class="encadreuse" id="cat1" name="cat<?php echo $i ?>"><?php echo $nomcat['nom'] ?></div>
             <br />
-            <?php 
+            <?php $c=1;
             while($nomsscat=$recupsscat->fetch())
             {  
             ?>
-                <div class="sscat encadreuse"><?php echo $nomsscat['nom'] ?></div>
+                <div class="sscat encadreuse"><a name="ss<?php echo $i;echo $c ?>"><?php echo $nomsscat['nom'] ?></a></div>
+                <input style="display: none;" type="text" name="ss<?php echo $i;echo $c ?>" value="<?php echo $nomsscat['nom'] ?>">
                 <input class="elem" type="text" id="" name="elem<?php echo $i;echo $c ?>1" placeholder="Element 1">
                 <SELECT name="note<?php echo $i;echo $c ?>1" size="1">
                     <OPTION>note

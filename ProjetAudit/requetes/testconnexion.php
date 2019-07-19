@@ -18,8 +18,6 @@ if (isset($_POST['connexion']))
 			$_SESSION['login'] = $_POST['user_login'];
 			header('Location: ../accueil.php');
 	  		exit();
-
-			
 		}
 		else
 	    {
